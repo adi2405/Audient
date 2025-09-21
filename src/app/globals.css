@@ -3,8 +3,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
-.html, body {
-  background-color: #F4FCFC;
+html,
+body {
+  background-color: #f4fcfc;
 }
 
 @theme inline {

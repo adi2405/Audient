@@ -1,9 +1,9 @@
 const UserProfile = () => {
   return (
-    <div className="relative">
+    <div className="pt-20">
       User Profile
     </div>
-  )
-}
+  );
+};
 
-export default UserProfile
+export default UserProfile;
