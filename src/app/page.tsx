@@ -1,11 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { ChevronsRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-import Navbar from "@/components/custom/navbar";
 import { Button } from "@/components/ui/button";
 
 const Page = () => {
@@ -20,9 +20,7 @@ const Page = () => {
 
   return (
     <div>
-      <Navbar />
-
-      <section className="flex flex-col justify-center items-center p-20">
+      <section className="flex flex-col justify-center items-center pt-40 pb-20">
         <h1 className="text-[56px] font-bold leading-tight">
           The Agentic Experience
         </h1>
@@ -33,12 +31,20 @@ const Page = () => {
           We analyze intent, detect emotions, summarize opinions, and generate
           clear arguments
         </p>
-        <Button size={"lg"} variant={"primary"} className="mt-6">
-          Get Started
-          <span>
-            <ChevronsRight className="size-6" />
-          </span>
-        </Button>
+        <Link href={"/user-profile"}>
+          <div className="group bg-[#FED420] mt-6">
+            <Button
+              size={"lg"}
+              variant={"primary"}
+              className="transition-transform group-hover:translate-x-2 group-hover:-translate-y-2"
+            >
+              Get Started
+              <span>
+                <ChevronsRight className="size-6" />
+              </span>
+            </Button>
+          </div>
+        </Link>
       </section>
 
       <div ref={ref} className="flex justify-center pb-20 perspective-distant">
@@ -46,8 +52,8 @@ const Page = () => {
           <Image
             src={"/images/hero-image.png"}
             alt="Hero Image"
-            height={720}
-            width={1080}
+            width={1120}
+            height={630}
             className="rounded-3xl shadow-xl"
           />
         </motion.div>
