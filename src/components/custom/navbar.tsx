@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { LayoutDashboard, MoveRight } from "lucide-react";
+import { Sparkles, MoveRight } from "lucide-react";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 import { Button } from "../ui/button";
@@ -50,15 +50,15 @@ const Navbar = () => {
       </SignedOut>
       <SignedIn>
         <div className="flex gap-6">
-          <Link href={"/user-profile"}>
+          <Link href={"/analyze"}>
             <div className="group bg-[#05DF72] cursor-pointer">
               <Button
                 size={"lg"}
                 variant={"tertiary"}
                 className="transition-transform group-hover:translate-x-2 group-hover:-translate-y-2"
               >
-                <LayoutDashboard />
-                Dashboard
+                <Sparkles />
+                Analyze
               </Button>
             </div>
           </Link>
